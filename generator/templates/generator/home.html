@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Password Generator</title>
+</head>
+<body>
+    <!-- This is the home section where the user can customize the password to be generated -->
+    <div class="container text-center">
+        <br>
+        <h1>Unique Password Generator</h1>
+        <br><br><br>
+        <div class="container text-left">
+            <form action="{% url 'password' %}">
+                Length
+                <select name="length">
+                    <option value="6">6 characters</option>
+                    <option value="7">7 characters</option>
+                    <option value="8">8 characters</option>
+                    <option value="9">9 characters</option>
+                    <option value="10" selected>10 characters</option>
+                    <option value="11">11 characters</option>
+                    <option value="12">12 characters</option>
+                    <option value="13">13 characters</option>
+                    <option value="14">14 characters</option>
+                    <option value="15">15 characters</option>
+                </select> 
+                <br><br>
+
+                <input type="checkbox" name="uppercase"> Uppercase
+                <br><br>
+
+                <input type="checkbox" name="numbers"> Numbers
+                <br><br>
+
+                <input type="checkbox" name="special_char"> Special Characters
+                <br><br>
+
+                <input type="submit" class="btn btn-primary" value="Generate Password">
+            </form>
+        </div>
+        <br><br>
+        <!-- This link will take the user to the About Us webpage by referring the url file -->
+        <a href="{% url 'about' %}">About Us</a>
+    </div>
+    
+    
+</body>
+</html>
