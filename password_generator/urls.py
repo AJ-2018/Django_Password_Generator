@@ -19,7 +19,6 @@ from generator import views
 
 #url file helps you to declare the path each webpage has when the user interacts with the website.
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('', views.home, name="home"),
     path('password/', views.password, name="password"),
     path('about_us/', views.about, name="about"),
